@@ -1,0 +1,78 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+
+
+<style>
+    .card{
+        margin: 8rem;
+    }
+    .card-body {
+        margin: 0rem;
+    }
+    p{
+        font-size: medium;
+    }
+    .card-link{
+        color:black;
+        font-size: 0.6rem;
+        display: inline-block;
+        padding: 10px 20px;
+        background-color:#198754;
+        color: white;
+        text-decoration: none;
+        border-radius: 5px;
+    }
+    /* Add hover effect to the card */
+    .card:hover {
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        transform: translateY(-2px);
+        background-color: rgb(196, 199, 196);
+    }
+    
+    .wrapper {
+  width: 200px;
+  height: 60px;
+  position: relative;
+  z-index: 1;
+}
+
+
+</style>
+
+<div class="row">
+    <div class="col-md-4">
+        <div class="card" style="width: 25rem; height:15rem ;">
+            <div class="card-body">
+                <h5 class="card-title">Careers</h5>
+               <br>
+                <p class="card-text"> Embark on a journey that goes beyond just a job. At ♻️ Tech.Ltd, you will get an environment that fosters growth, learning, and collaboration. </p>
+                <a href="/carrers/" class="card-link">Apply</a>
+                
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-4">
+        <div class="card" style="width: 25rem; height: 15rem;">
+            <div class="card-body">
+                <h5 class="card-title">Internship</h5>
+                <br>
+                <p class="card-text">♻️ Tech.Ltd offers exciting internship opportunities that ignite your passion and prepare you for a successful career,Join us to gain hands-on experience. </p>
+                <a href="/internship/" class="card-link">View Internship</a>
+               
+            </div>
+        </div>
+    </div>
+</div>
+<footer>
+    <center>
+
+   
+    <p>Shashank Thapa: 2024 ♻️ Tech.Ltd . All rights reserved.</p>
+</center>
+</footer>
+
+{% endblock %}
+	

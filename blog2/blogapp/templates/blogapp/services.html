@@ -1,0 +1,68 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+<br>
+<center>
+    <h1> Services</h1>
+</center>
+<style>
+   
+    .card{
+
+        margin:  4rem; ;
+        border-top-right-radius: 1rem;
+        height: 25rem;
+        width: 20rem;
+
+    }
+    p{
+        font-size: 0.9rem;
+    }
+    /* Your existing CSS styles */
+
+    .card-title {
+        font-weight: bold;
+    }
+
+    /* Your existing CSS styles */
+
+.action {
+    color:black;
+    font-size: 0.6rem;
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: rgb(50, 130, 188);
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+
+</style>
+
+<div class="row row-cols-1 row-cols-md-3 g-4">
+  
+    {% for i in courses %}
+    
+    <div class="row row-cols-1 row-cols-md-2 g-4">
+    <div class="col">
+    <div class="card">
+      <img src="{{i.image.url}}" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">{{i.title}}</h5>
+        <p>{{i.description |truncatechars_html:120| safe}}</p>
+
+      <a class="action" href="{{ i.url }}">ReadMore</a>
+        
+    </div>
+    </div>
+    </div>
+  
+</div>
+
+{% endfor %}
+
+
+
+{% endblock %}

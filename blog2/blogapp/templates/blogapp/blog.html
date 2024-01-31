@@ -1,0 +1,52 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+
+<style>
+
+    .card{
+        margin: 4rem;
+        border-bottom-right-radius: 7rem;
+        
+    }
+    p{
+        font-size: 0.99rem;
+        font-family:'Times New Roman', Times, serif;
+    }
+    card:hover {
+        background-color: rgb(196, 199, 196);
+    }
+</style>
+<center>
+    <h1>Featured Story</h1>
+</center>
+
+
+
+{% for i in blogs %}
+<div class="card mb-3" style="max-width: 65rem;">
+    <div class="row g-0">
+      <div class="col-md-4">
+        <img src="{{i.image.url}}" class="img-fluid rounded-start" alt="...">
+      </div>
+      <div class="col-md-8">
+        <div class="card-body">
+          <h5 class="card-title">{{i.title}}</h5>
+          <p class="card-text">{{i.description |truncatechars_html:300 |safe }}</p>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+{% endfor %}
+<footer>
+  <center>
+
+ 
+  <p>Shashank Thapa: 2024 ♻️ Tech.Ltd . All rights reserved.</p>
+</center>
+</footer>
+
+{% endblock %}
+	

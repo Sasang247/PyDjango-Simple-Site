@@ -1,0 +1,129 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sipalaya Info Tech </title>
+
+    {% block title %}
+    {% endblock title %}
+    
+    
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/nav.css">
+    <title>Document</title>
+
+    {% block customcss %}
+    {% endblock customcss %}
+
+<style>
+    .navbar-fixed {
+        position: fixed;
+        width: 100%;
+        top: 0;
+        z-index: 1000;
+    }
+
+    .content {
+        margin-top: 80px; /* Adjust this margin to prevent content from being overlapped by the fixed navbar */
+    }
+    .navbar-brand{
+        font-size: 2rem;
+    }
+
+    .navbar{
+        
+        padding-top: 1.5rem;
+        padding-bottom: -0.72rem;
+    
+       
+       
+       
+    }
+    .navbar-nav .nav-item a:hover {
+            color: red; /* Change the color to your desired hover color */
+            text-decoration: underline; /* Add an underline effect on hover */
+            /* You can add any other styles for the hover effect here */
+        }
+    .btn{
+        font-size: 1.5rem;
+    }
+    body{
+        font-size: 1.2rem;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        
+    }
+    .navbar-nav .nav-item + .nav-item {
+             margin-left: 28px; /* Adjust the value as needed */
+}
+</style>
+
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="/buildwithus/"> ♻️ Tech.Ltd</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse d-flex justify-content-center" id="navbarSupportedContent">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="/home/">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="/services/">Services</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="/joinus/">Join Our Team</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="/blog/">Blog</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="/about/">AboutUs</a>
+                </li>
+            </ul>
+           
+        </div>
+        <a href="/buildwithus/">
+            <button type="button" class="btn btn-success">💻 BUILD WITH US</button>
+
+
+        </a>
+        
+        </div>
+      </nav>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+     {% block content %}
+    {% endblock content %}
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZF6fDQq2WxLrBfxkH5njr2oFuLdE+u7ldf1XfPU4LrMby9Y3mm/4PR" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.min.js" integrity="sha384-mQwBtJpjtXz2lYKAzQ9PujXBwuOB/5l5YhI1lNTNK6Zk2OQ1b7niuC9aQLD6t0iP" crossorigin="anonymous"></script>
+
+    {% block script %}
+    {% endblock script %}
+
+</body>
+</html>

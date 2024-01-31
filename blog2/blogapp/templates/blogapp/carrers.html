@@ -1,0 +1,85 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+
+<style>
+
+h1{
+    font-size: xxx-large;
+    font-weight: bolder;
+    font-family:'Times New Roman', Times, serif;
+
+}
+h2{
+    font-family:'Times New Roman', Times, serif;
+    font-size: 1.8rem;
+
+}
+.current-color {
+    color: green;
+}
+
+.opening-color {
+    color: black;
+}
+
+   .card{
+    margin: 2rem;
+    height: 8rem;
+    border-color: white;
+   }
+   a{
+    font-size: small;
+   }
+
+   h3{
+    font-size: larger;
+    font-family:'Times New Roman', Times, serif;
+    font-weight: bolder;
+   }
+   p{
+    font-family:'Times New Roman', Times, serif;
+    font-size: large;
+   }
+   .card-link{
+        color:black;
+        font-size: 0.6rem;
+        display: inline-block;
+        padding: 4px 17px;
+        background-color:#198754;
+        color: white;
+        text-decoration: none;
+        border-radius: 31px;
+        margin: 0rem;
+
+   }
+
+</style>
+<br>
+<center>
+    <h1><span class="current-color">Current</span> <span class="opening-color">Openings</span></h1>
+    <h2> Do you think you are a good fit? Apply now. We would love to meet you.</h2>
+</center>
+<br>
+{% for i in carrer %}
+    <div class="card">
+        {%csrf_token %}
+        <div class="card-body">
+            <h3>
+                {{i.title}}
+            </h3>
+            <p>{{i.address}}</p>
+            <a href="/apply/" class="card-link ml-auto">Apply now</a>
+        </div>
+    </div>
+{% endfor %}
+<footer>
+ <center>
+
+   
+    <p>Shashank Thapa: 2024 ♻️ Tech.Ltd . All rights reserved.</p>
+</center>
+</footer>
+
+{% endblock %}
